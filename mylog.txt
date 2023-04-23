@@ -1,0 +1,46 @@
+warn: 17/10/2022 15:57:12.785 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+info: 17/10/2022 15:57:12.960 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 7.0.0-preview.7.22376.2 initialized 'RobotContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.0-preview.7+962e65bd8d5cf095cf0eb1d0a674fad8038c47a2' with options: SensitiveDataLoggingEnabled 
+dbug: 17/10/2022 15:57:12.985 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<RobotCommand>()'
+dbug: 17/10/2022 15:57:13.141 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<RobotCommand>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.QueryExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: RobotCommand.Id (_id, int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: RobotCommand.CreatedDate (_createdDate, DateTime) Required, 1], [Property: RobotCommand.Description (_description, string) Required MaxLength(800), 2], [Property: RobotCommand.IsMoveCommand (_isMoveCommand, bool) Required, 3], [Property: RobotCommand.ModifiedDate (_modifiedDate, DateTime) Required, 4], [Property: RobotCommand.Name (_name, string) Required MaxLength(50), 5] }
+              SELECT r.id, r.createddate, r.description, r.ismovecommand, r.modifieddate, r.name
+              FROM robotcommand AS r), 
+          null, 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, RobotCommand>, 
+          robot_controller_api.Persistence.RobotContext, 
+          False, 
+          False, 
+          True
+      )'
+dbug: 17/10/2022 15:57:13.167 RelationalEventId.ConnectionCreating[20005] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Creating DbConnection.
+dbug: 17/10/2022 15:57:13.221 RelationalEventId.ConnectionCreated[20006] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Created DbConnection. (53ms).
+dbug: 17/10/2022 15:57:13.221 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 17/10/2022 15:57:13.225 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (59ms).
+dbug: 17/10/2022 15:57:13.227 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Initialized DbCommand for 'ExecuteReader' (62ms).
+dbug: 17/10/2022 15:57:13.230 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'sit331' on server ''.
+dbug: 17/10/2022 15:57:13.399 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'sit331' on server 'tcp://localhost:5432'.
+dbug: 17/10/2022 15:57:13.404 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.createddate, r.description, r.ismovecommand, r.modifieddate, r.name
+      FROM robotcommand AS r
+info: 17/10/2022 15:57:13.459 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (55ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT r.id, r.createddate, r.description, r.ismovecommand, r.modifieddate, r.name
+      FROM robotcommand AS r
+dbug: 17/10/2022 15:57:13.503 CoreEventId.StartedTracking[10
